@@ -24,9 +24,14 @@ public class AppConfig {
     }
 
     @Bean
-    public Die die() {
-        return new ThreeSided();
-        //return new SixSided();
-        //return new TwelveSided();
+    public SixSided sixSided() {
+        return new SixSided();
     }
+
+    @Bean
+    public ThreeSided threeSided() {
+        return new ThreeSided();
+    }
+
+
 }

@@ -4,6 +4,7 @@ import edu.wctc.dice.iface.Die;
 import edu.wctc.dice.iface.GameInput;
 import edu.wctc.dice.iface.GameOutput;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class DiceGame {
 
 
     @Autowired
-    public DiceGame(GameInput in, GameOutput out, Die die) {
+    public DiceGame(GameInput in, GameOutput out, @Qualifier("sixSided") Die die) {
         this.in = in;
         this.out = out;
         this.die = die;
